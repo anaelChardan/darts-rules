@@ -1,0 +1,8 @@
+extensions:
+    Memio\SpecGen\MemioSpecGenExtension: ~
+suites:
+    darts:
+        namespace: Akeneo\Darts
+        psr4_prefix: Akeneo\Darts
+        src_path: "%paths.config%/src/Darts"
+        spec_path: "%paths.config%/test/Unit/Darts"

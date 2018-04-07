@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  fpm:
+    build: ./docker/fpm
+    environment:
+      BEHAT_TMPDIR: '/srv/darts/var/cache/tmp'
+      COMPOSER_HOME: '/home/docker/.composer'
+      PHP_IDE_CONFIG: 'serverName=darts'
+      PHP_XDEBUG_ENABLED: 0
+      PHP_XDEBUG_IDE_KEY: 'XDEBUG_IDE_KEY'
+      XDEBUG_CONFIG: 'remote_host=xxx.xxx.xxx.xxx'
+    user: docker
+    volumes:
+      - ./:/srv/darts
+      - ~/.composer:/home/docker/.composer
+      - /tmp/behat/screenshots:/tmp/behat/screenshots
+    working_dir: /srv/darts
+    networks:
+      - darts
+
+networks:
+  darts: ~

@@ -1,0 +1,39 @@
+{
+  "authors": [
+    {
+      "name": "Anaël CHARDAN",
+      "email": "anael.chardan@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "behat/behat": "^3.1",
+    "phpunit/phpunit": "^5.3",
+    "friendsofphp/php-cs-fixer": "^2.1",
+    "phpstan/phpstan": "^0.9",
+    "phpspec/phpspec": "^4.0",
+    "memio/spec-gen": "^0.8"
+  },
+  "require": {
+    "php": "^7.2",
+    "beberlei/assert": "^2.5",
+    "ramsey/uuid": "^3.4",
+    "phpoption/phpoption": "^1.5",
+    "php-ds/php-ds": "^1.2"
+  },
+  "suggest": {
+    "ext-ds": "This extension will improve performances"
+  },
+  "autoload": {
+    "psr-4": {
+      "Akeneo\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Test\\Integration\\": "test/Integration",
+      "Test\\Acceptance\\": "test/Acceptance",
+      "Test\\System\\": "test/System",
+      "Test\\Unit\\": "test/Unit"
+    }
+  }
+}
