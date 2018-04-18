@@ -19,7 +19,7 @@ class SectionPointsValue
         $this->pointsValue = $pointsValue;
     }
 
-    public function pointsValue(): int
+    public function value(): int
     {
         return $this->pointsValue;
     }

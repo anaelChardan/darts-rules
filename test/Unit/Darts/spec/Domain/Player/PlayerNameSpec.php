@@ -1,16 +1,20 @@
 <?php
 
-namespace spec\Akeneo\Darts\Domain;
+namespace spec\Akeneo\Darts\Domain\Player;
 
-use Akeneo\Darts\Domain\PlayerName;
+use Akeneo\Darts\Domain\Player\PlayerName;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
 class PlayerNameSpec extends ObjectBehavior
 {
-    function it_is_initializable()
+    function let()
     {
         $this->beConstructedWith('a_name');
+    }
+
+    function it_is_initializable()
+    {
         $this->shouldHaveType(PlayerName::class);
     }
 }

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Akeneo\Darts\Domain;
+namespace Akeneo\Darts\Domain\Player;
 
-class PlayerName
+final class PlayerName
 {
     /** @var string */
     private $name;
